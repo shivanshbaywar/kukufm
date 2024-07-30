@@ -7,7 +7,7 @@ const Slide = ({ carouselData, currentIndex }) => {
       <div className="slide" >
         {carouselData.map((item, index) => (
           <div
-            className={`item ${index === currentIndex ? 'active' : ''}`} // Add active class for current slide
+            className={`item ${index === currentIndex ? 'active' : ''}`} 
             key={index}
             style={{
         backgroundImage: `url(${item.other_images.landscape_image})`,
@@ -18,7 +18,6 @@ const Slide = ({ carouselData, currentIndex }) => {
             <div className="content">
               <div className="name">{item.title}</div>
               <div className="des">{item.description}</div>
-              {/* <button>See More</button> */}
             </div>
           </div>
         ))}
@@ -39,7 +38,7 @@ export default function Carousel() {
           'https://d31ntp24xvh0tq.cloudfront.net/api/v2.1/home/all/?preferred_langs=hindi&page=1&lang=english'
         );
         localStorage.setItem('apiData', JSON.stringify(response.data));
-        setCarouselData(response.data.items[0].banners); // Set data after successful fetch
+        setCarouselData(response.data.items[0].banners); 
       } catch (error) {
         setError(error);
       } finally {
@@ -89,28 +88,6 @@ const handlePrevClick = () => {
       setCurrentIndex((currentIndex + 1) % updatedData.length);
       setIsLoading(false);
   };
-
-//   const handlePrevClick = () => {
-//     setCurrentIndex((prevIndex) => {
-//       if (carouselData.length === 0) {
-//         return 0;
-//       }
-//       const newIndex = (prevIndex - 1 + carouselData.length) % carouselData.length;
-//       console.log(newIndex);
-//       return newIndex;
-//     });
-//   };
-  
-//   const handleNextClick = () => {
-//     setCurrentIndex((prevIndex) => {
-//       if (carouselData.length === 0) {
-//         return 0;
-//       }
-//       const newIndex = (prevIndex + 1) % carouselData.length;
-//       console.log(newIndex);
-//       return newIndex;
-//     });
-//   };
 
   return (
     <div id="carousels">
