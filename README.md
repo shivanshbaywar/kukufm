@@ -2,7 +2,8 @@
 run command npm i or npm install to install all the dependencies.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# Deployment Link
+https://kuku-fm.netlify.app/
 # Use Server Side Rendering
 to use SSR go to index.js const root = ReactDOM.createRoot(document.getElementById('root')); root.render( <React.StrictMode> </React.StrictMode> ); comment this code const container = document.getElementById('container'); hydrateRoot(container, ); and uncomment this code. the run npm run build then node server/index.js
 
