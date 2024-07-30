@@ -1,0 +1,100 @@
+.navbar{
+    background-color: rgb(239, 65, 48);
+    position: sticky;
+}
+.logo1{
+    color: aliceblue;
+}
+.container{
+    height:80px;
+}
+.select-button {
+    /* Existing styles */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .height-button, .select-button:hover {
+    height: 55px;
+    background-color: #ffffff;
+    margin-top: 23px;
+    color: black;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+.searchbar::placeholder {
+    color: rgb(225, 225, 225);
+  }
+  .searchbar:focus{
+    border-color: gray;
+    color: aliceblue;
+  }
+  .searchbar{
+    width:450px;
+  }
+
+  .select-container {
+    position: relative;
+    display: inline-block;
+  }
+  .select-container-inner {
+   width:400px;
+   background-color: #ffffff;
+   height: 230px;
+   padding: 10px;
+  }
+  
+  .select-container:hover .select-options {
+    display: block;
+  }
+  .apply-button {
+    width:100%
+  }
+  .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .select-options button {
+    margin-top: 10px;
+  }
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar > div {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar > div:first-child {
+      margin-bottom: 1rem;
+    }
+  
+    .navbar > div:last-child {
+      margin-top: 1rem;
+    }
+  
+    .navbar input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .navbar select {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .navbar button {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
